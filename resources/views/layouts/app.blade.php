@@ -26,7 +26,7 @@
             <div class="container">
 		<a class="navbar-brand" href="{{ url('/') }}">
 		    <div>
-			<img class="" src="images/pen-tool.svg" />
+			<img class="" src="{{ url('/') }}/images/pen-tool.svg" />
 			|
 			{{ config('app.name', 'Laravel') }}
 		    </div>
