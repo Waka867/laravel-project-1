@@ -8,15 +8,19 @@ use \App\User;
 
 class ProfilesController extends Controller
 {
-  public function index( $user )
-  {
-      $user = User::find($user);
+	public function index( $user )
+	{
+   
+		//$user = User::find($user);
+		// findOrFail gracefully brings user to 404 page if something goes wrong. Only user the other find option for debugging.
+		$user = User::findOrFail($user);
 
-      //dd($user);
+      		//dd($user);
 
-      return view('home', [
-        'user' => $user
-      ]);
+      		return view('profiles.index', [
+        	'user' => $user
+		
+	]);
 
   }
 }
